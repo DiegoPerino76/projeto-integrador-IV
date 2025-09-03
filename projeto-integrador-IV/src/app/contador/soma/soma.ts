@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-soma',
@@ -6,6 +6,18 @@ import { Component } from '@angular/core';
   templateUrl: './soma.html',
   styleUrl: './soma.css'
 })
-export class Soma {
+export class Soma implements OnInit {
+
+  public valor: number = 0;
+
+  constructor() {}
+
+  ngOnInit(): void {
+      
+  }
+
+  incrementar(): void {
+    this.valor = this.valor + 1;
+  }
 
 }

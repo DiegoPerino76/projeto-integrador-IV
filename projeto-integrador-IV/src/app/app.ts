@@ -7,5 +7,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('projeto-integrador-IV');
+  protected readonly title = signal('primeiro-projeto');
 }

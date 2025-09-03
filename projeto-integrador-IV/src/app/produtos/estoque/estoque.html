@@ -1,0 +1,21 @@
+<h1>Catálogo de Produtos</h1>
+
+<div>
+    <button (click)="aumentarPreco()">Aumentar preços em 10%</button>
+    <button (click)="diminuirPreco()">Diminuir preços em 10%</button>
+</div>
+
+<ul>
+    <li *ngFor="let produto of produtos">
+        {{produto.nome }} -
+        <span [ngStyle]="{'color': produto.preco > 2000 ? 'blue' : 'black'}">
+            R$ {{produto.preco}}
+        </span>
+        <span *ngIf="produto.estoque > 0" [ngClass]="'disponivel'">
+            Disponível
+        </span>
+        <span *ngIf="produto.estoque <= 0" [ngClass]="'indisponivel'">
+            Indisponível
+        </span>
+    </li>
+</ul><p>estoque works!</p>
